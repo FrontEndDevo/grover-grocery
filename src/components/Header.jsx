@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container flex flex-col items-center justify-between gap-12 lg:gap-32 lg:flex-row-reverse">
         <div className="relative basis-1/3">
           <Image src={header} alt="header chef" className="w-full" />
-          <div className="absolute right-full top-1/3">
+          <div className="absolute right-[90%] top-[20%]">
             <SuggestedProduct />
           </div>
           <div className="absolute top-0 flex gap-4 px-4 py-2 bg-white rounded-lg right-2 md:top-24 md:-right-8 lg:-right-8 xl:-right-4 lg:top-16 xl:top-24">

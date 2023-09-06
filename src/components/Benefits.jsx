@@ -42,7 +42,7 @@ const Benefits = () => {
       <div className="container">
         <div className="font-bold text-center">
           <h5 className="text-base text-red-400 lg:text-xl">What we Serve</h5>
-          <h2 className="mt-4 text-3xl leading-tight lg:text-5xl xl:px-60 lg:px-44 2xl:px-96 text-neutral-800">
+          <h2 className="mt-4 text-3xl leading-tight capitalize lg:text-5xl xl:px-60 lg:px-44 2xl:px-96 text-neutral-800">
             fruit and vegetable delivered to your home
           </h2>
         </div>

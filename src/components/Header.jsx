@@ -1,6 +1,6 @@
 import Image from "next/image";
-import header from "../../public/images/header/header.webp";
-import temp_header from "../../public/images/header/temp_header_image_2.png";
+import header from "../../public/images/header.webp";
+import temp_header from "../../public/images/temp_header_image_2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClockRotateLeft, faPlay } from "@fortawesome/free-solid-svg-icons";
 import SuggestedProduct from "./SuggestedProduct";

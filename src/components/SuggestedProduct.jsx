@@ -1,5 +1,5 @@
 import Image from "next/image";
-import tempImg from "../../public/images/header/temp_header_image.png";
+import tempImg from "../../public/images/temp_header_image.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 const SuggestedProduct = () => {

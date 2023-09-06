@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
             alt="Why should you choose us?"
             className="w-full"
           />
-          <div className="absolute -bottom-12 left-2 lg:right-[90%] lg:top-[20%]">
+          <div className="absolute -bottom-12 left-2 lg:left-[80%] xl:bottom-[30%] lg:bottom-[10%]">
             <SuggestedMeal />
           </div>
         </div>

@@ -5,13 +5,13 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 lg:py-40 bg-slate-50">
       <div className="container flex flex-col items-center justify-between gap-10 lg:gap-32 lg:flex-row">
-        <div className="relative basis-1/2">
+        <div className="relative pb-40 basis-1/2">
           <Image
             src={chooseUs}
             alt="Why should you choose us?"
             className="w-full"
           />
-          <div className="absolute -bottom-24 left-2 lg:right-[90%] lg:top-[20%]">
+          <div className="absolute -bottom-12 left-2 lg:right-[90%] lg:top-[20%]">
             <SuggestedMeal />
           </div>
         </div>

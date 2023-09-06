@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 const SuggestedProduct = () => {
   return (
-    <div className="relative px-8 py-4 text-center duration-300 bg-white cursor-pointer hover:animate-none animate-bounce lg:animate-none lg:px-16 lg:pt-8 lg:pb-12 rounded-xl hover:-translate-y-4">
-      <Image src={tempImg} alt="temp image" className="w-24" />
+    <div className="relative px-8 py-4 text-center duration-300 bg-white cursor-pointer hover:animate-none animate-bounce lg:animate-none lg:px-8 lg:pt-8 lg:pb-12 rounded-xl hover:-translate-y-4">
+      <Image src={tempImg} alt="temp image" className="w-20 mx-auto lg:w-28" />
       <div>
         <h4 className="py-2 my-2 text-xs font-bold border-b-2 border-orange-500">
           Fresh Orenge

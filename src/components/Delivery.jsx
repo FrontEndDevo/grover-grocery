@@ -1,11 +1,29 @@
 import Image from "next/image";
 import deliveryImg from "../../public/images/delivery.webp";
+import bike from "../../public/images/bike_deliver.svg";
 const Delivery = () => {
+  const bikeDelivery = (
+    <div className="absolute p-8 text-center bg-white right-0 bottom-10 lg:left-[75%] lg:bottom-1/3 rounded-2xl w-60">
+      <Image
+        src={bike}
+        alt="Delivery man"
+        className="px-12 py-4 bg-red-100 w-fit rounded-2xl"
+      />
+      <h4 className="mt-4 mb-2 text-base font-bold text-neutral-800">
+        Bike Delivery
+      </h4>
+      <p className="text-xs text-gray-700">
+        Bicycle service ensures that your packages arrive quickly
+      </p>
+    </div>
+  );
+
   return (
-    <section className="py-10 lg:py-4 bg-slate-50 ">
+    <section className="py-10 lg:py-4 bg-slate-50">
       <div className="container flex flex-col items-center justify-between lg:flex-row-reverse">
-        <div className="basis-4/12">
-          <Image src={deliveryImg} alt="Delivery man" className="w-full" />
+        <div className="relative pb-60 lg:p-0 basis-4/12">
+          <Image src={deliveryImg} alt="chef man" className="w-full" />
+          {bikeDelivery}
         </div>
 
         <div className="mx-4 text-center xl:basis-6/12 lg:basis-8/12 lg:text-start">

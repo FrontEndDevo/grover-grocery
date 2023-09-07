@@ -3,7 +3,7 @@ import chooseUs from "../../public/images/choose_us.webp";
 import SuggestedMeal from "./SuggestedMeal";
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 lg:py-40 bg-slate-50">
+    <section className="py-20 lg:py-4 bg-slate-50">
       <div className="container flex flex-col items-center justify-between gap-10 lg:gap-32 lg:flex-row">
         <div className="relative pb-40 basis-1/2">
           <Image
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
             At vero eos et accusamus et iusto odio dignissimos ducimus
             blanditiis praesen voluptatum deleniti.
           </p>
-          <button className="w-full px-8 py-4 text-white duration-200 bg-red-400 lg:w-fit rounded-xl hover:bg-red-500">
+          <button className="w-full px-8 py-4 text-white duration-300 bg-red-500 border-2 lg:w-fit rounded-xl hover:bg-transparent hover:border-red-500 hover:text-red-500">
             Explore Now
           </button>
         </div>

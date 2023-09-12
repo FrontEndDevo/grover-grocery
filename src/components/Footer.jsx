@@ -40,18 +40,21 @@ const Footer = () => {
   return (
     <footer className=" bg-slate-50">
       <div className="container">
-        <div className="flex py-36 gap-60">
+        <div className="flex flex-col gap-20 text-center lg:text-start xl:flex-row py-36 lg:gap-60">
           <div className="basis-1/2">
-            <div className="flex items-center gap-2 mb-4">
+            <Link
+              href="/"
+              className="flex items-center justify-center gap-2 my-4 lg:justify-start"
+            >
               <Image src={groverImg} alt="Grover logo" />
               <h1 className="text-4xl font-bold text-neutral-800">Grover</h1>
-            </div>
-            <p className="text-base text-gray-700">
+            </Link>
+            <p className="px-2 text-base text-gray-700">
               Fast delivery, which is active all over the world, serves with
               many transportation vehicles.
             </p>
           </div>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-3">
             <div>
               <h4 className="mb-4 text-xl font-bold text-neutral-800">
                 Company
@@ -75,8 +78,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between py-6 border-t-2">
-          <p>All Rights Reserved &copy; FrontEndDevo 2023</p>
+        <div className="flex flex-col items-center justify-between gap-2 py-6 border-t-2 md:flex-row">
+          <p>
+            All Rights Reserved &copy;{" "}
+            <Link href="https://github.com/FrontEndDevo" target="_blank">
+              FrontEndDevo 2023
+            </Link>
+          </p>
           <div className="flex gap-4">
             <Link
               href="/terms-and-conditions"

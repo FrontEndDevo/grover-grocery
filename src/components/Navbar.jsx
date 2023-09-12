@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import groverImg from "../../public/images/grover_grocery.webp";
@@ -6,8 +7,15 @@ import {
   faBasketShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 const navbarLinks = ["home", "menu", "service", "shop"];
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const showMenuHandler = () => {
+    setShowMenu((prevState) => !prevState);
+  };
+
   const navbarLists = navbarLinks.map((item, i) => (
     <li
       key={i}
@@ -20,7 +28,7 @@ const Navbar = () => {
   ));
   return (
     <nav className="bg-slate-50">
-      <div className="container flex items-center justify-between pt-8">
+      <div className="container relative flex flex-col items-center justify-between pt-8 lg:flex-row">
         <div>
           <Link
             href="/"
@@ -30,8 +38,28 @@ const Navbar = () => {
             <h1 className="text-4xl font-bold text-neutral-800">Grover</h1>
           </Link>
         </div>
-        <ul className="flex gap-14">{navbarLists}</ul>
-        <div className="relative">
+
+        <div className="absolute right-0 z-50 flex flex-col items-end px-4 lg:relative gap-7 top-1/3">
+          <div
+            onClick={showMenuHandler}
+            className={`flex duration-700 ease-in-out gap-2 cursor-pointer lg:hidden ${
+              showMenu ? "-rotate-[450deg]" : ""
+            }`}
+          >
+            <span className="w-4 h-4 bg-transparent border border-blue-400 rounded-full"></span>
+            <span className="w-4 h-4 bg-transparent border border-blue-400 rounded-full"></span>
+            <span className="w-4 h-4 bg-transparent border border-blue-400 rounded-full"></span>
+          </div>
+          <ul
+            className={`flex flex-col items-center px-20 py-8 before:w-8 relative before:absolute before:right-4 before:-top-2 before:h-8 lg:before:hidden  before:bg-white before:rotate-45 duration-200 bg-white shadow-lg lg:shadow-none shadow-red-500/50 rounded-xl text-start lg:bg-transparent gap-14 lg:flex-row lg:scale-100 lg:translate-y-0 ${
+              showMenu ? "scale-100 translate-y-4" : "scale-0 -translate-y-8"
+            }`}
+          >
+            {navbarLists}
+          </ul>
+        </div>
+
+        <div className="relative mt-6 lg:mt-0">
           <input
             type="text"
             name="search"

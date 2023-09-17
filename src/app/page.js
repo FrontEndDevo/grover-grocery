@@ -5,14 +5,15 @@ import Header from "@/components/Header";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { restaurantsActions } from "@/slices/restaurantsSlice";
+import { fruitsActions } from "@/slices/fruitsSlice";
 
 export default async function Home() {
   const dispatch = useDispatch();
+
+  // Store the Restaurants.
   const restaurants = await getDocs(collection(db, "resturants"));
-  console.log(restaurants.docs[0].data());
   restaurants.docs.forEach((rest) => {
     dispatch(
       restaurantsActions.addRestaurant({
@@ -20,8 +21,19 @@ export default async function Home() {
         foodItems: rest.data().foodItems,
       })
     );
+    console.log({
+      restaurant: rest.data().restaurant,
+      foodItems: rest.data().foodItems,
+    });
   });
 
+  // Store the Fruits.
+  const fruits = await getDocs(collection(db, "fruits"));
+  fruits.docs.forEach((fruit) => {
+    dispatch(fruitsActions.addNewFruit(fruit.data()));
+    console.log(fruit.data());
+  });
+  
   return (
     <>
       <Header />

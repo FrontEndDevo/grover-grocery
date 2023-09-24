@@ -18,7 +18,7 @@ const Footer = () => {
   const footerCompanyLists = footerCompanyLinks.map((item, index) => (
     <li
       key={index}
-      className="py-2 text-base text-gray-700 duration-200 hover:text-black hover:underline"
+      className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
     >
       <Link href={`/${item.toLocaleLowerCase().replace(" ", "-")}`}>
         {item}
@@ -29,7 +29,7 @@ const Footer = () => {
   const footerServicesLists = footerServicesLinks.map((item, index) => (
     <li
       key={index}
-      className="py-2 text-base text-gray-700 duration-200 hover:text-black hover:underline"
+      className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
     >
       <Link href={`/${item.toLocaleLowerCase().replace(" ", "-")}`}>
         {item}
@@ -47,31 +47,31 @@ const Footer = () => {
               className="flex items-center justify-center gap-2 my-4 lg:justify-start"
             >
               <Image src={groverImg} alt="Grover logo" />
-              <h1 className="text-4xl font-bold text-neutral-800">Grover</h1>
+              <h1 className="text-4xl font-bold text-main-700">Grover</h1>
             </Link>
-            <p className="px-2 text-base text-gray-700">
+            <p className="px-2 text-base text-main-500">
               Fast delivery, which is active all over the world, serves with
               many transportation vehicles.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-3">
             <div>
-              <h4 className="mb-4 text-xl font-bold text-neutral-800">
+              <h4 className="mb-4 text-xl font-bold text-main-700">
                 Company
               </h4>
               <ul>{footerCompanyLists}</ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-bold text-neutral-800">
+              <h4 className="mb-4 text-xl font-bold text-main-700">
                 Services
               </h4>
               <ul>{footerServicesLists}</ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-bold text-neutral-800">
+              <h4 className="mb-4 text-xl font-bold text-main-700">
                 Get in Touch
               </h4>
-              <p className="text-base text-gray-700">
+              <p className="text-base text-main-500">
                 Subscribe to our weekly Newsletter and receive updates via
                 email.
               </p>
@@ -88,13 +88,13 @@ const Footer = () => {
           <div className="flex gap-4">
             <Link
               href="/terms-and-conditions"
-              className="py-2 text-base text-gray-700 duration-200 hover:text-black hover:underline"
+              className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
             >
               Terms Conditions
             </Link>
             <Link
               href="/privacy-policy"
-              className="py-2 text-base text-gray-700 duration-200 hover:text-black hover:underline"
+              className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
             >
               Privacy Policy
             </Link>

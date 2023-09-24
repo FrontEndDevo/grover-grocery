@@ -27,26 +27,28 @@ const Benefits = () => {
   const allBenefits = allGroverGroceryBenefits.map((item, i) => (
     <div
       key={i}
-      className="relative px-2 py-12 text-center duration-1000 bg-white rounded-lg shadow-xl shadow-red-500/50 lg:shadow-red-50 hover:lg:shadow-red-500/100"
+      className="relative px-2 py-12 text-center duration-1000 bg-white rounded-lg shadow-xl shadow-primary-100 hover:lg:shadow-primary-500"
     >
       <FontAwesomeIcon
         icon={item.icon}
-        className="mx-auto mb-20 text-red-500 w-28"
+        className="mx-auto mb-20 text-primary-700 w-28 h-28"
       />
-      <h3 className="mb-4 text-2xl font-bold">{item.benefit}</h3>
-      <p className="px-16 text-sm text-gray-400">{item.description}</p>
+      <h3 className="mb-4 text-2xl font-bold text-main-700">{item.benefit}</h3>
+      <p className="px-16 text-sm text-main-100">{item.description}</p>
     </div>
   ));
   return (
-    <section className="py-20 bg-red-100 lg:py-40">
+    <section className="py-20">
       <div className="container">
         <div className="font-bold text-center">
-          <h5 className="text-base text-red-400 lg:text-xl">What we Serve</h5>
-          <h2 className="mt-4 text-3xl leading-tight capitalize lg:text-5xl xl:px-60 lg:px-44 2xl:px-96 text-neutral-800">
+          <h5 className="text-base text-primary-700 lg:text-2xl">
+            What we Serve
+          </h5>
+          <h2 className="mt-4 text-3xl leading-tight capitalize lg:text-5xl xl:px-60 lg:px-44 2xl:px-96 text-main-700">
             fruit and vegetable delivered to your home
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-24 mx-4 mt-24 md:mx-0 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-24 mx-4 mt-20 md:mx-0 md:grid-cols-2 lg:grid-cols-3">
           {allBenefits}
         </div>
       </div>

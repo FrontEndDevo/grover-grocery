@@ -19,9 +19,9 @@ const Navbar = () => {
   const navbarLists = navbarLinks.map((item, i) => (
     <li
       key={i}
-      className={`text-base font-bold text-gray-700 capitalize ${
-        i == 0 ? "text-red-500" : ""
-      } duration-200 hover:text-red-500`}
+      className={`text-base font-bold text-main-700 capitalize ${
+        i == 0 ? "text-primary-500" : ""
+      } duration-200 hover:text-primary-500`}
     >
       <Link href={`/${item}`}>{item}</Link>
     </li>
@@ -35,7 +35,7 @@ const Navbar = () => {
             className="flex items-center justify-center gap-2 my-4 lg:justify-start"
           >
             <Image src={groverImg} alt="Grover logo" />
-            <h1 className="text-4xl font-bold text-neutral-800">Grover</h1>
+            <h1 className="text-4xl font-bold text-main-700">Grover</h1>
           </Link>
         </div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
             <span className="w-4 h-4 bg-transparent border border-blue-400 rounded-full"></span>
           </div>
           <ul
-            className={`flex flex-col items-center px-20 py-8 before:w-8 relative before:absolute before:right-4 before:-top-2 before:h-8 lg:before:hidden  before:bg-white before:rotate-45 duration-200 bg-white shadow-lg lg:shadow-none shadow-red-500/50 rounded-xl text-start lg:bg-transparent gap-14 lg:flex-row lg:scale-100 lg:translate-y-0 ${
+            className={`flex flex-col items-center px-20 py-8 before:w-8 relative before:absolute before:right-4 before:-top-2 before:h-8 lg:before:hidden before:bg-white before:rotate-45 duration-200 bg-white shadow-lg lg:shadow-none shadow-primary-100 rounded-xl text-start lg:bg-transparent gap-14 lg:flex-row lg:scale-100 lg:translate-y-0 ${
               showMenu ? "scale-100 translate-y-4" : "scale-0 -translate-y-8"
             }`}
           >
@@ -64,18 +64,18 @@ const Navbar = () => {
             type="text"
             name="search"
             id="search"
-            className="w-full py-4 pl-10 pr-16 outline-none rounded-xl text-neutral-700 placeholder:text-neutral-700"
+            className="w-full py-4 pl-10 pr-16 outline-none rounded-xl text-main-700 placeholder:text-neutral-700"
             placeholder="Search"
           />
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
-            className="absolute w-4 text-gray-600 left-4 top-1/3"
+            className="absolute w-4 text-main-500 left-4 top-1/3"
           />
-          <button className="absolute w-10 px-1 text-gray-800 border-l right-6 top-1/4">
+          <button className="absolute w-10 px-1 border-l text-main-700 right-6 top-1/4">
             <FontAwesomeIcon icon={faBasketShopping} />
           </button>
-          <span className="absolute px-3 py-1 text-white bg-red-500 rounded-full shadow-lg -right-2 -top-2 shadow-red-500/50">
-            0
+          <span className="absolute px-3 py-1 text-white rounded-full shadow-lg bg-primary-700 -right-2 -top-2 shadow-primary-100">
+            2
           </span>
         </div>
       </div>

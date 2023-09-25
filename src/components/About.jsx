@@ -55,9 +55,9 @@ const deliveringFeatures = [
 
 const About = () => {
   const aboutSercices = (
-    <ul className="grid grid-cols-2 gap-4">
+    <ul className="grid grid-cols-2 text-center lg:text-start lg:grid-cols-3 2xl:grid-cols-2 gap-y-12 gap-x-2 lg:gap-4">
       {ourServices.map((srv) => (
-        <li className="flex items-center gap-4">
+        <li className="flex flex-col items-center gap-4 lg:flex-row">
           <FontAwesomeIcon
             icon={srv.icon}
             className="w-8 p-4 text-3xl rounded-full bg-green-50 text-primary-100"
@@ -66,7 +66,7 @@ const About = () => {
             <h6 className="text-base font-bold capitalize text-main-700">
               {srv.title}
             </h6>
-            <p className="text-xs text-main-100">{srv.description}</p>
+            <p className="mt-2 text-xs text-main-100">{srv.description}</p>
           </div>
         </li>
       ))}
@@ -81,24 +81,25 @@ const About = () => {
             icon={faCheck}
             className="w-6 p-2 text-3xl rounded-full bg-green-50 text-primary-700"
           />
-          <p>{feature}</p>
+          <p className="text-sm text-justify lg:text-base">{feature}</p>
         </li>
       ))}
     </ul>
   );
+
   return (
-    <section className="pt-40">
-      <div className="container flex flex-row-reverse items-center justify-center gap-40">
+    <section className="pt-40 pb-10 xl:pb-0">
+      <div className="container flex flex-col items-center justify-center gap-8 xl:gap-40 lg:flex-row-reverse">
         <Image
           src={aboutTwo}
           alt="100% Trusted Organic Food Store Part 1"
           className="basis-1/2"
         />
-        <div className="basis-1/2">
-          <h2 className="mb-10 text-6xl font-bold text-main-700">
+        <div className="px-4 text-center lg:text-start basis-1/2">
+          <h2 className="mb-10 text-3xl font-bold xl:text-6xl text-main-700">
             100% Trusted Organic Food Store
           </h2>
-          <p className="text-base text-justify text-main-100">
+          <p className="text-sm text-center lg:text-justify lg:text-base text-main-100">
             Morbi porttitor ligula in nunc varius sagittis. Proin dui nisi,
             laoreet ut tempor ac, cursus vitae eros. Cras quis ultricies elit.
             Proin ac lectus arcu. Maecenas aliquet vel tellus at accumsan. Donec
@@ -108,17 +109,17 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 my-20">
+      <div className="flex flex-col items-center gap-8 my-20 lg:gap-4 2xl:flex-row">
         <Image
           src={aboutThree}
           alt="100% Trusted Organic Food Store Part 2"
-          className=""
+          className="w-full"
         />
-        <div className="pr-40">
-          <h2 className="mb-10 text-6xl font-bold text-main-700">
+        <div className="px-4 lg:mt-6 2xl:mt-0 2xl:pr-40">
+          <h2 className="mb-6 text-3xl font-bold text-center 2xl:mb-10 2xl:text-start lg:text-4xl xl:text-6xl text-main-700">
             100% Trusted Organic Food Store
           </h2>
-          <p className="mb-6 text-base text-justify text-main-100">
+          <p className="mb-6 text-sm text-center xl:text-justify text-main-100">
             Pellentesque a ante vulputate leo porttitor luctus sed eget eros.
             Nulla et rhoncus neque. Duis non diam eget est luctus tincidunt a a
             mi. Nulla eu eros consequat tortor tincidunt feugiat.
@@ -127,20 +128,20 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container flex flex-row-reverse items-center justify-center gap-4">
+      <div className="container flex flex-col items-center justify-center gap-8 xl:gap-4 xl:flex-row-reverse">
         <Image src={aboutFour} alt="We Delivered Part 3" />
-        <div>
-          <h2 className="mb-10 text-6xl font-bold text-main-700">
-            We Delivered, You Enjoy Your Order.
+        <div className="px-4 text-center xl:text-start">
+          <h2 className="mb-10 text-3xl font-bold xl:text-6xl text-main-700">
+            We Delivered, You Enjoy Your Order
           </h2>
-          <p className="mb-4 text-base text-justify text-main-100">
+          <p className="mb-4 text-base text-center xl:text-justify text-main-100">
             Ut suscipit egestas suscipit. Sed posuere pellentesque nunc,
             ultrices consectetur velit dapibus eu. Mauris sollicitudin dignissim
             diam, ac mattis eros accumsan rhoncus. Curabitur auctor bibendum
             nunc eget elementum.
           </p>
           {ourDeliverFeatures}
-          <button className="flex items-center justify-center gap-4 px-8 py-4 text-white duration-200 bg-primary-500 rounded-xl hover:bg-primary-700">
+          <button className="flex items-center justify-center w-full gap-4 px-8 py-4 text-white duration-200 bg-primary-500 rounded-xl hover:bg-primary-700 lg:w-fit">
             Shop Now <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>

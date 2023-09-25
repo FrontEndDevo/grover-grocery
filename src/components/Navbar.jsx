@@ -28,7 +28,7 @@ const Navbar = () => {
   ));
   return (
     <nav className="fixed z-50 w-full bg-slate-50">
-      <div className="container relative flex flex-col items-center justify-between pt-6 lg:flex-row">
+      <div className="container relative flex flex-col items-center justify-between lg:flex-row">
         <div>
           <Link
             href="/"

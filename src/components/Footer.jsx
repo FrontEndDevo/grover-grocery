@@ -40,7 +40,7 @@ const Footer = () => {
   return (
     <footer className=" bg-slate-50">
       <div className="container">
-        <div className="flex flex-col gap-20 text-center lg:text-start xl:flex-row py-36 lg:gap-60">
+        <div className="flex flex-col gap-20 text-center lg:text-start xl:flex-row lg:gap-60">
           <div className="basis-1/2">
             <Link
               href="/"
@@ -56,15 +56,11 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-3">
             <div>
-              <h4 className="mb-4 text-xl font-bold text-main-700">
-                Company
-              </h4>
+              <h4 className="mb-4 text-xl font-bold text-main-700">Company</h4>
               <ul>{footerCompanyLists}</ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-bold text-main-700">
-                Services
-              </h4>
+              <h4 className="mb-4 text-xl font-bold text-main-700">Services</h4>
               <ul>{footerServicesLists}</ul>
             </div>
             <div>

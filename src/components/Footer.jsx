@@ -16,10 +16,7 @@ const footerServicesLinks = [
 ];
 const Footer = () => {
   const footerCompanyLists = footerCompanyLinks.map((item, index) => (
-    <li
-      key={index}
-      className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
-    >
+    <li key={index} className="py-2 text-base duration-200 hover:underline">
       <Link href={`/${item.toLocaleLowerCase().replace(" ", "-")}`}>
         {item}
       </Link>
@@ -27,10 +24,7 @@ const Footer = () => {
   ));
 
   const footerServicesLists = footerServicesLinks.map((item, index) => (
-    <li
-      key={index}
-      className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
-    >
+    <li key={index} className="py-2 text-base duration-200 hover:underline">
       <Link href={`/${item.toLocaleLowerCase().replace(" ", "-")}`}>
         {item}
       </Link>
@@ -38,36 +32,34 @@ const Footer = () => {
   ));
 
   return (
-    <footer className=" bg-slate-50">
+    <footer className="text-white bg-main-700">
       <div className="container">
-        <div className="flex flex-col gap-20 text-center lg:text-start xl:flex-row lg:gap-60">
+        <div className="flex flex-col gap-20 py-10 text-center lg:text-start xl:flex-row lg:gap-60">
           <div className="basis-1/2">
             <Link
               href="/"
               className="flex items-center justify-center gap-2 my-4 lg:justify-start"
             >
               <Image src={groverImg} alt="Grover logo" />
-              <h1 className="text-4xl font-bold text-main-700">Grover</h1>
+              <h1 className="text-4xl font-bold ">Grover</h1>
             </Link>
-            <p className="px-2 text-base text-main-500">
+            <p className="px-2 text-base">
               Fast delivery, which is active all over the world, serves with
               many transportation vehicles.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-3">
             <div>
-              <h4 className="mb-4 text-xl font-bold text-main-700">Company</h4>
+              <h4 className="mb-4 text-xl font-bold ">Company</h4>
               <ul>{footerCompanyLists}</ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-bold text-main-700">Services</h4>
+              <h4 className="mb-4 text-xl font-bold ">Services</h4>
               <ul>{footerServicesLists}</ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-bold text-main-700">
-                Get in Touch
-              </h4>
-              <p className="text-base text-main-500">
+              <h4 className="mb-4 text-xl font-bold ">Get in Touch</h4>
+              <p className="text-base">
                 Subscribe to our weekly Newsletter and receive updates via
                 email.
               </p>
@@ -84,13 +76,13 @@ const Footer = () => {
           <div className="flex gap-4">
             <Link
               href="/terms-and-conditions"
-              className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
+              className="py-2 text-base duration-200 hover:underline"
             >
               Terms Conditions
             </Link>
             <Link
               href="/privacy-policy"
-              className="py-2 text-base duration-200 text-main-500 hover:text-black hover:underline"
+              className="py-2 text-base duration-200 hover:underline"
             >
               Privacy Policy
             </Link>

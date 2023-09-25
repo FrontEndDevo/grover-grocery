@@ -47,7 +47,7 @@ const Team = () => {
 
   return (
     <div className="bg-slate-50">
-      <div className="container py-10">
+      <div className="container py-20">
         <div className="px-10 mb-16 text-center xl:px-96">
           <h2 className="mb-6 text-3xl font-bold lg:text-5xl text-main-700">
             Our Awesome Team

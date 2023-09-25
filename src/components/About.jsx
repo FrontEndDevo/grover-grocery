@@ -13,6 +13,7 @@ import {
   faCheck,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Team from "./Team";
 
 const ourServices = [
   {
@@ -88,7 +89,7 @@ const About = () => {
   );
 
   return (
-    <section className="pt-40 pb-10 xl:pb-0">
+    <section className="pt-40 xl:pb-0">
       <div className="container flex flex-col items-center justify-center gap-8 xl:gap-40 lg:flex-row-reverse">
         <Image
           src={aboutTwo}
@@ -146,6 +147,8 @@ const About = () => {
           </button>
         </div>
       </div>
+
+      <Team />
     </section>
   );
 };

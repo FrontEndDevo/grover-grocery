@@ -1,0 +1,67 @@
+import Jenny from "../../public/images/about/Jenny.webp";
+import Jane from "../../public/images/about/Jane.webp";
+import Cody from "../../public/images/about/Cody.webp";
+import Robert from "../../public/images/about/Robert.webp";
+import Image from "next/image";
+
+const ourTeam = [
+  {
+    img: Jenny,
+    name: "Jenny Wilson",
+    job: "Ceo & Founder",
+  },
+  {
+    img: Jane,
+    name: "Jane Cooper",
+    job: "Worker",
+  },
+  {
+    img: Cody,
+    name: "Cody Fisher",
+    job: "Security Guard",
+  },
+  {
+    img: Robert,
+    name: "Robert Fox",
+    job: "Senior Farmer Manager",
+  },
+];
+const Team = () => {
+  const groverTeam = (
+    <ul className="flex flex-wrap items-center justify-center gap-6">
+      {ourTeam.map((member) => (
+        <li className="bg-white rounded-lg">
+          <Image
+            src={member.img}
+            alt={member.name}
+            className="rounded-t-lg w-80 h-80"
+          />
+          <div className="p-4">
+            <h3 className="mb-2 text-2xl text-main-700">{member.name}</h3>
+            <span className="text-base text-main-100">{member.job}</span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+
+  return (
+    <div className="bg-slate-50">
+      <div className="container py-10">
+        <div className="px-10 mb-16 text-center xl:px-96">
+          <h2 className="mb-6 text-3xl font-bold lg:text-5xl text-main-700">
+            Our Awesome Team
+          </h2>
+          <p className="text-sm lg:text-lg text-main-100">
+            Pellentesque a ante vulputate leo porttitor luctus sed eget eros.
+            Nulla et rhoncus neque. Duis non diam eget est luctus tincidunt a a
+            mi.
+          </p>
+        </div>
+        {groverTeam}
+      </div>
+    </div>
+  );
+};
+
+export default Team;

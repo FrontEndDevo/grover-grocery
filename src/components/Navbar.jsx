@@ -16,14 +16,14 @@ const Navbar = () => {
     setShowMenu((prevState) => !prevState);
   };
 
-  const navbarLists = navbarLinks.map((item, i) => (
+  const navbarLists = navbarLinks.map((item, index) => (
     <li
-      key={i}
+      key={index}
       className={`text-base font-bold text-main-700 capitalize ${
-        i == 0 ? "text-primary-500" : ""
+        index == 0 ? "text-primary-500" : ""
       } duration-200 hover:text-primary-500`}
     >
-      <Link href={`/${item}`}>{item}</Link>
+      <Link href={`/${index == 0 ? "" : item}`}>{item}</Link>
     </li>
   ));
   return (

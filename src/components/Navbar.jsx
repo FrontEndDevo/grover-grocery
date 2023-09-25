@@ -8,7 +8,7 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-const navbarLinks = ["home", "menu", "service", "shop"];
+const navbarLinks = ["home", "menu", "about", "shop"];
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -28,7 +28,7 @@ const Navbar = () => {
   ));
   return (
     <nav className="fixed z-50 w-full bg-slate-50">
-      <div className="container relative flex flex-col items-center justify-between pt-8 lg:flex-row">
+      <div className="container relative flex flex-col items-center justify-between pt-6 lg:flex-row">
         <div>
           <Link
             href="/"

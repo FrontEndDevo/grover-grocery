@@ -82,7 +82,7 @@ const Team = () => {
     <ul>
       <Slider {...settings}>
         {ourTeam.map((member, i) => (
-          <li key={i} className="bg-white rounded-lg">
+          <li key={i} className="bg-white rounded-lg outline-none">
             <Image
               src={member.img}
               alt={member.name}

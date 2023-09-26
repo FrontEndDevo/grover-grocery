@@ -8,7 +8,7 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-const navbarLinks = ["home", "menu", "about", "shop"];
+const navbarLinks = ["home", "restaurants", "shop", "about", "contact"];
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -19,7 +19,7 @@ const Navbar = () => {
   const navbarLists = navbarLinks.map((item, index) => (
     <li
       key={index}
-      className={`text-base font-bold  capitalize ${
+      className={`text-base font-bold capitalize ${
         index == 0 ? "text-primary-500" : ""
       } duration-200 hover:text-primary-500`}
     >
@@ -40,7 +40,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="absolute right-0 z-50 flex flex-col items-end px-4 lg:relative gap-7 top-8">
+        <div className="absolute right-0 z-50 flex flex-col items-end px-4 lg:relative gap-7 top-8 lg:top-0">
           <div
             onClick={showMenuHandler}
             className={`flex duration-700 ease-in-out gap-2 cursor-pointer lg:hidden ${

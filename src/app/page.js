@@ -9,6 +9,11 @@ import { useDispatch } from "react-redux";
 import { restaurantsActions } from "@/slices/restaurantsSlice";
 import { fruitsActions } from "@/slices/fruitsSlice";
 
+export const metadata = {
+  title: "Home | Grover Grocery",
+  description: "Grover Grocery homepage",
+};
+
 export default async function Home() {
   const dispatch = useDispatch();
 
@@ -21,19 +26,14 @@ export default async function Home() {
         foodItems: rest.data().foodItems,
       })
     );
-    console.log({
-      restaurant: rest.data().restaurant,
-      foodItems: rest.data().foodItems,
-    });
   });
 
   // Store the Fruits.
   const fruits = await getDocs(collection(db, "fruits"));
   fruits.docs.forEach((fruit) => {
     dispatch(fruitsActions.addNewFruit(fruit.data()));
-    console.log(fruit.data());
   });
-  
+
   return (
     <>
       <Header />

@@ -8,8 +8,12 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 const navbarLinks = ["home", "restaurants", "shop", "about", "contact"];
 const Navbar = () => {
+  const currentPath = usePathname();
+
   const [showMenu, setShowMenu] = useState(false);
 
   const showMenuHandler = () => {
@@ -19,9 +23,9 @@ const Navbar = () => {
   const navbarLists = navbarLinks.map((item, index) => (
     <li
       key={index}
-      className={`text-base font-bold capitalize ${
-        index == 0 ? "text-primary-500" : ""
-      } duration-200 hover:text-primary-500`}
+      className={`text-base duration-200 hover:text-primary-500 font-bold capitalize ${
+        item == currentPath.slice(1) ? "text-primary-500" : ""
+      } ${index == 0 && currentPath == "/" ? "text-primary-500" : ""}`}
     >
       <Link href={`/${index == 0 ? "" : item}`}>{item}</Link>
     </li>

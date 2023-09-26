@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Team from "./Team";
 
-const ourServices = [
+export const ourServices = [
   {
     icon: faLeaf,
     title: "100% Organic food",
@@ -41,7 +41,7 @@ const ourServices = [
     title: "Free Shipping",
     description: "Free shipping with discount",
   },
-  {
+  { 
     icon: faUserLock,
     title: "Secure checkout",
     description: "return rotten items to us",

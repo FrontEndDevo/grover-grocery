@@ -1,8 +1,11 @@
+import RestaurantsList from "./RestaurantsList";
 
 const Restaurants = () => {
   return (
-    <div>Restaurants</div>
-  )
-}
+    <section className="py-40">
+      <RestaurantsList />
+    </section>
+  );
+};
 
-export default Restaurants
+export default Restaurants;

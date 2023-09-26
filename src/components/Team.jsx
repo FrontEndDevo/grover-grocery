@@ -1,8 +1,10 @@
+"use client";
 import Jenny from "../../public/images/about/Jenny.webp";
 import Jane from "../../public/images/about/Jane.webp";
 import Cody from "../../public/images/about/Cody.webp";
 import Robert from "../../public/images/about/Robert.webp";
 import Image from "next/image";
+import Slider from "react-slick";
 
 const ourTeam = [
   {
@@ -25,23 +27,74 @@ const ourTeam = [
     name: "Robert Fox",
     job: "Senior Farmer Manager",
   },
+  {
+    img: Jenny,
+    name: "Jenny Wilson",
+    job: "Ceo & Founder",
+  },
+  {
+    img: Jane,
+    name: "Jane Cooper",
+    job: "Worker",
+  },
+  {
+    img: Cody,
+    name: "Cody Fisher",
+    job: "Security Guard",
+  },
+  {
+    img: Robert,
+    name: "Robert Fox",
+    job: "Senior Farmer Manager",
+  },
 ];
+
 const Team = () => {
+  const settings = {
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
+  };
+
   const groverTeam = (
-    <ul className="flex flex-wrap items-center justify-center gap-6">
-      {ourTeam.map((member) => (
-        <li className="bg-white rounded-lg">
-          <Image
-            src={member.img}
-            alt={member.name}
-            className="rounded-t-lg w-80 h-80"
-          />
-          <div className="p-4">
-            <h3 className="mb-2 text-2xl text-main-700">{member.name}</h3>
-            <span className="text-base text-main-100">{member.job}</span>
-          </div>
-        </li>
-      ))}
+    <ul>
+      <Slider {...settings}>
+        {ourTeam.map((member, i) => (
+          <li key={i} className="bg-white rounded-lg">
+            <Image
+              src={member.img}
+              alt={member.name}
+              className="w-full rounded-t-lg h-80"
+            />
+            <div className="p-4">
+              <h3 className="mb-2 text-2xl text-main-700">{member.name}</h3>
+              <span className="text-base text-main-100">{member.job}</span>
+            </div>
+          </li>
+        ))}
+      </Slider>
     </ul>
   );
 

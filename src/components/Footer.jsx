@@ -2,7 +2,8 @@ import Image from "next/image";
 import groverImg from "../../public/images/grover_grocery.webp";
 import Link from "next/link";
 const footerCompanyLinks = [
-  "About Us",
+  "Contact",
+  "About",
   "Blog",
   "All Products",
   "Locations Map",

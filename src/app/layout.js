@@ -4,9 +4,8 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import { store } from "./store";
-import { Provider } from "react-redux";
+import Navbar from "../components/Navbar";
+import ReduxProvider from "./redux/provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,13 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Provider store={store}>
+        <ReduxProvider>
           <div>
             <Navbar />
             {children}
             <Footer />
           </div>
-        </Provider>
+        </ReduxProvider>
       </body>
     </html>
   );
